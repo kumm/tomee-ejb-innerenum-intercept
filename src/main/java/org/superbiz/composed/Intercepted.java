@@ -12,6 +12,11 @@ public class Intercepted {
     }
 
     @Interceptors(HelloInterceptor.class)
+    public String method(final OuterEnum p) {
+        return "IT SHOULD NOT RUN";
+    }
+
+    @Interceptors(HelloInterceptor.class)
     public String method(String p) {
         return "IT SHOULD NOT RUN";
     }

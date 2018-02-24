@@ -28,6 +28,11 @@ public class InterceptorTest extends TestCase {
     }
 
     @Test
+    public void testOuterEnum() throws Exception {
+        assertEquals("HELLO", intercepted.method(OuterEnum.TEST));
+    }
+
+    @Test
     public void testString() throws Exception {
         assertEquals("HELLO", intercepted.method("TEST"));
     }
